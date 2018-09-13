@@ -287,8 +287,6 @@
     <Content Include="Views\Admin\KategoriEkle.cshtml" />
     <Content Include="Views\Admin\UrunEklee.cshtml" />
     <Content Include="Views\Admin\UrunSil.cshtml" />
-    <Content Include="Views\Home\Regisster.cshtml" />
-    <Content Include="Views\Home\Logisn.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Register.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
