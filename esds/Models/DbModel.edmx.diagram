@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="aa3425fd73b7408a8d0c65bc90a25ded" Name="Diagram1">
+        <EntityTypeShape EntityType="EsdsModel.aspnet_Roles" Width="1.5" PointX="0.75" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EsdsModel.aspnet_Users" Width="1.5" PointX="3" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EsdsModel.Kategori" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EsdsModel.Marka" Width="1.5" PointX="0.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EsdsModel.Musteri" Width="1.5" PointX="5.25" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EsdsModel.Rota" Width="1.5" PointX="5.25" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EsdsModel.Satis" Width="1.5" PointX="7.5" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EsdsModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EsdsModel.Urun" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="EsdsModel.FK_Musteri_aspnet_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="EsdsModel.FK_Urun_Kategori" ManuallyRouted="false" />
+        <AssociationConnector Association="EsdsModel.FK_Urun_Marka" ManuallyRouted="false" />
+        <AssociationConnector Association="EsdsModel.FK_Satis_Musteri" ManuallyRouted="false" />
+        <AssociationConnector Association="EsdsModel.FK_Rota_Urun1" ManuallyRouted="false" />
+        <AssociationConnector Association="EsdsModel.FK_Satis_Rota" ManuallyRouted="false" />
+        <AssociationConnector Association="EsdsModel.aspnet_UsersInRoles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

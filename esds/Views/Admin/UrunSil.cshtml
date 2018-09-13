@@ -1,0 +1,65 @@
+﻿@model esds.Models.Urun
+
+@{
+    ViewBag.Title = "UrunSil";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>Ürün Sil</h2>
+
+<h3>Silmek istediğine emin misin?</h3>
+<div>
+    <h4>Urun</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Adi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Aciklama)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Aciklama)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AlisFiyat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AlisFiyat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SatisFiyat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SatisFiyat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EklenmeTarihi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EklenmeTarihi)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Sil" class="btn btn-default" /> |
+            @Html.ActionLink("Ürünlere geri dön", "Urunler", new{Model.Id})
+        </div>
+    }
+</div>

@@ -1,0 +1,44 @@
+﻿@model IEnumerable<esds.Models.Kategori>
+
+@{
+    ViewBag.Title = "Kategoriler";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<div class="card-body">
+        <button class="btn btn-primary" type="button" onclick="location.href='@Url.Action("KategoriEkle","Admin")'">
+              Yeni Kategori Ekle
+            </button>
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th>Adı</th>
+                      <th>Açıklama</th>
+                            <th>Güncelle</th>
+                      <th>Sil</th>
+                    </tr>
+                  </thead>
+                  <tfoot>
+                    <tr>
+                       <th>Adı</th>
+                      <th>Açıklama</th>
+                 <th>Güncelle</th>
+                      <th>Sil</th>
+
+                    </tr>
+                  </tfoot>
+                  <tbody>
+
+                      @foreach (var Kategori in Model){
+                      <tr>
+                      <td>@Kategori.Adi</td>
+                      <td>@Kategori.Aciklama</td>
+                   <td><a class="edit" href="/Admin/KategoriGuncelle">Güncelle</a>  </td>
+                      <td><a class="delete" href="/Admin/KategoriSil">Sil</a>  </td>
+                    </tr>
+                      }
+                  </tbody>
+                </table>
+              </div>
+            </div>
+

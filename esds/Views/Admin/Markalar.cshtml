@@ -1,0 +1,49 @@
+﻿@model IEnumerable<esds.Models.Marka>
+
+@{
+    ViewBag.Title = "Markalar";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<div class="card-body">
+        <button class="btn btn-primary" type="button" onclick="location.href='@Url.Action("MarkaEkle","Admin")'">
+              Yeni Marka Ekle
+            </button>
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th>Adı</th>
+                      <th>Açıklama</th>
+                            <th>Güncelle</th>
+                      <th>Sil</th>
+                    </tr>
+                  </thead>
+                  <tfoot>
+                    <tr>
+                       <th>Adı</th>
+                      <th>Açıklama</th>
+                 <th>Güncelle</th>
+                      <th>Sil</th>
+
+                    </tr>
+                  </tfoot>
+                  <tbody>
+
+                      @foreach (var Marka in Model){
+                      <tr>
+                      <td>@Marka.Adi</td>
+                      <td>@Marka.Aciklama</td>
+                   <td><a class="edit" href="/Admin/MarkaGuncelle">Güncelle</a>  </td>
+                      <td><a class="delete" href="/Admin/MarkaSil">Sil</a>  </td>
+                    </tr>
+                      }
+                    
+                      
+
+                    
+                    
+                  </tbody>
+                </table>
+              </div>
+            </div>
+

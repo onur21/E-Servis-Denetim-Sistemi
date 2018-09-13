@@ -1,0 +1,60 @@
+﻿@model IEnumerable<esds.Models.Urun>
+@{
+    ViewBag.Title = "Urunler";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+
+}
+        
+    <div class="card-body">
+        <button class="btn btn-primary" type="button" onclick="location.href='@Url.Action("UrunEklee","Admin")'">
+              Yeni Ürün Ekle
+            </button>
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th>Adı</th>
+                      <th>Açıklama</th>
+                      <th>Alış Fiyatı</th>
+                      <th>Satış Fiyatı</th>
+                      <th>Eklenme Tarihi</th>  
+                         <th>Kategori</th>
+                      <th>Marka</th>  
+                        <th>Güncelle</th>
+                      <th>Sil</th>         
+                    </tr>
+                  </thead>
+                  <tfoot>
+                    <tr>
+                       <th>Adı</th>
+                      <th>Açıklama</th>
+                      <th>Alış Fiyatı</th>
+                      <th>Satış Fiyatı</th>
+                      <th>Eklenme Tarihi</th> 
+                        <th>Kategori</th>
+                      <th>Marka</th> 
+                        <th>Güncelle</th>
+                      <th>Sil</th>       
+                    </tr>
+                  </tfoot>
+                  <tbody>
+
+                      @foreach (var Urun in Model){
+                      <tr>
+                      <td>@Urun.Adi</td>
+                      <td>@Urun.Aciklama</td>
+                      <td>@Urun.AlisFiyat</td>
+                      <td>@Urun.SatisFiyat</td>
+                      <td>@Urun.EklenmeTarihi</td>
+                          <td>@Urun.Kategori</td>
+                      <td>@Urun.Marka</td>
+                          <td><a class="edit" href="/Admin/UrunGuncelle">Güncelle</a>  </td>
+                      <td><a class="delete" href="/Admin/UrunSil/">Sil</a>  </td>
+                    </tr>
+                      }
+                    
+                    
+                  </tbody>
+                </table>
+              </div>
+            </div>

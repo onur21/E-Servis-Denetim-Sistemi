@@ -1,0 +1,55 @@
+﻿@model esds.Models.Uye
+
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+        <body class="bg-dark">
+
+       
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="container">
+
+        <div class="card card-register mx-auto mt-5">
+            <div class="card-header">Yeni Üye Oluştur</div>
+            <div class="card-body">
+                <form>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <div class="form-group">
+                                <div class="form-label-group">
+                                    @Html.EditorFor(model => model.KullaniciAdi, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.KullaniciAdi, "", new { @class = "text-danger" })
+            <label>Kullanıcı Adı</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <div class="form-group">
+                                <div class="form-label-group">
+                                    @Html.EditorFor(model => model.Sifre, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Sifre, "", new { @class = "text-danger" })
+                <label>Şifre</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+
+                        <input type="submit" value="Ekle" class="btn btn-primary btn-block" />
+
+                    </div>
+                </form>
+            </div>
+        </div></div></body>
+}
+
+
